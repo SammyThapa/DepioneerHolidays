@@ -1,0 +1,137 @@
+.mainContainer {
+  width: 100%;
+  padding: 80px 6%;
+  background: var(--background);
+  margin-top: 100px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+  max-width: 800px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.heading h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.heading p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+
+/* =========================
+   PLACES
+========================= */
+
+.placesGrid {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+
+/* =========================
+   PLACE CARD
+========================= */
+
+.placeCard {
+  padding: 30px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.placeCard h2 {
+  margin-bottom: 12px;
+  font-size: 2rem;
+  color: var(--primary-dark);
+}
+
+.placeCard > p {
+  max-width: 800px;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+
+/* =========================
+   IMAGE GRID
+========================= */
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.imageGrid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.imageGrid img:hover {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .mainContainer {
+    padding: 60px 5%;
+  }
+
+  .heading {
+    margin-bottom: 50px;
+  }
+
+  .heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .placeCard {
+    padding: 20px;
+  }
+
+  .placeCard h2 {
+    font-size: 1.6rem;
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageGrid img {
+    height: 250px;
+  }
+}

@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #5697cd;
+  --primary-dark: #164764;
+  --accent: #e34a3b;
+  --gold: #ceb563;
+  --background: #f8fafc;
+  --white: #ffffff;
+  --text: #475569;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  background: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Prevent media from becoming wider than the screen */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make buttons and inputs inherit the page font */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

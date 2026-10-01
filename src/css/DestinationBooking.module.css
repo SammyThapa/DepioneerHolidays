@@ -1,0 +1,355 @@
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.overlayText {
+  position: absolute;
+  z-index: 2;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.bottomCon {
+  max-width: 1200px;
+
+  margin: 60px auto;
+  padding: 0 30px;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 420px;
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   DESTINATION INFORMATION
+========================= */
+
+.destinationInfo {
+  padding-top: 10px;
+}
+
+.destinationInfo > h2 {
+  margin: 0 0 25px;
+
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  color: var(--primary);
+}
+
+.overview {
+  max-width: 680px;
+
+  margin: 0 0 30px;
+
+  font-size: 1.05rem;
+  line-height: 1.85;
+
+  color: #444;
+}
+
+
+/* Destination details */
+
+.destinationDetails {
+  margin-top: 25px;
+}
+
+.destinationDetails p {
+  margin: 13px 0;
+
+  font-size: 1.05rem;
+  line-height: 1.5;
+
+  color: #444;
+}
+
+.destinationDetails strong {
+  color: var(--primary);
+}
+
+
+/* Highlights */
+
+.highlights {
+  margin-top: 35px;
+}
+
+.highlights h3 {
+  margin-bottom: 12px;
+
+  font-size: 1.4rem;
+
+  color: var(--primary);
+}
+
+.highlights p {
+  margin: 0;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  color: #444;
+}
+
+
+/* =========================
+   BOOKING CARD
+========================= */
+
+.formContainer {
+  position: sticky;
+  top: 30px;
+
+  padding: 30px;
+
+  background: var(--white);
+
+  border-radius: 18px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 5px 20px;
+
+  border: 1px solid #eeeeee;
+}
+
+.formContainer h2 {
+  margin: 0 0 8px;
+
+  font-size: 2rem;
+
+  color: var(--primary);
+}
+
+.formSubtitle {
+  margin: 0 0 18px;
+
+  color: #666;
+}
+
+
+/* Selected destination */
+
+.selectedDestination {
+  padding: 15px;
+
+  margin-bottom: 25px;
+
+  border-radius: 10px;
+
+  background: #f5f5f5;
+}
+
+.selectedDestination h3 {
+  margin: 0;
+
+  font-size: 1.1rem;
+
+  color: var(--primary);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.formContainer label {
+  margin-top: 12px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: #333;
+}
+
+.formContainer input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: var(--white);
+
+  font-size: 1rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.formContainer input::placeholder {
+  color: #999;
+}
+
+.formContainer input:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.formContainer button {
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--primary);
+  color: var(--white);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.formContainer button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+}
+
+.formContainer button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   NOT FOUND
+========================= */
+
+.notFound {
+  padding: 100px 30px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .bottomCon {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .formContainer {
+    position: static;
+  }
+
+  .destinationInfo {
+    padding-top: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .imageContainer {
+    height: 250px;
+  }
+
+  .overlayText {
+    font-size: 2.2rem;
+  }
+
+  .bottomCon {
+    margin: 40px auto;
+
+    padding: 0 20px;
+
+    gap: 35px;
+  }
+
+  .destinationInfo > h2 {
+    font-size: 1.8rem;
+     color: var(--primary-dark);
+  }
+
+  .overview {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .destinationDetails p,
+  .highlights p {
+    font-size: 1rem;
+  }
+
+  .formContainer {
+    padding: 24px;
+  }
+
+  .formContainer h2 {
+    font-size: 1.7rem;
+     color: var(--primary-dark);
+  }
+}

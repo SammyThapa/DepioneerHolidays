@@ -1,0 +1,190 @@
+.mainCon {
+  position: fixed;
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 1000;
+}
+
+/* Gold vertical tab */
+
+.contact {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 55px;
+  height: 280px;
+
+  background: var(--gold);
+
+  border-radius: 0 12px 12px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  color: var(--white);
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.contact svg {
+  font-size: 18px;
+}
+
+
+/* Popup */
+
+.dropDown {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--white);
+  border-radius:12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  -webkit-border-radius:12px;
+  -moz-border-radius:12px;
+  -ms-border-radius:12px;
+  -o-border-radius:12px;
+}
+
+
+/* Each contact row */
+
+.contactItem {
+  height: 93px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 15px 22px;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #eeeeee;
+
+  transition: 0.2s ease;
+}
+
+.contactItem:last-child {
+  border-bottom: none;
+}
+
+.contactItem:hover {
+  background: #f8fafc;
+}
+
+
+/* Circular icons */
+
+.icon {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+
+  font-size: 23px;
+}
+
+.phone {
+  background: #2474ed;
+}
+
+.whatsapp {
+  background: #20c968;
+}
+
+.email {
+  background: var(--gold);
+}
+
+
+/* Text */
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.info span {
+  color: #999999;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.info strong {
+  color: var(--primary-dark);
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .contact {
+    width: 48px;
+    height: 230px;
+  }
+
+  .contact span {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+
+  .dropDown {
+    left: 55px;
+    width: 290px;
+  }
+
+  .contactItem {
+    height: 80px;
+    padding: 12px 15px;
+    gap: 15px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 19px;
+  }
+
+  .info strong {
+    font-size: 0.9rem;
+  }
+}

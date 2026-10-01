@@ -1,0 +1,270 @@
+.mainCon {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 120px auto 0;
+  padding: 80px 20px;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.content {
+  max-width: 750px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #ceb563;
+}
+
+.content h2 {
+  margin: 0;
+
+  font-size: 3rem;
+  line-height: 1.2;
+
+  color: var(--primary-dark);
+}
+
+.content h2 strong {
+  color: #ceb563;
+
+  font-weight: 600;
+}
+
+.content p {
+  max-width: 650px;
+
+  margin: 20px auto 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--text);
+}
+
+
+/* =================================
+   CARD LIST
+================================= */
+
+.cardList {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =================================
+   CARD
+================================= */
+
+.card {
+  position: relative;
+
+  padding: 35px;
+
+  background: var(--white);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.07);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =================================
+   CARD TOP
+================================= */
+
+.cardTop {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.number {
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #ceb563;
+}
+
+
+/* =================================
+   ICON
+================================= */
+
+.icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(86, 151, 205, 0.1);
+
+  color: #5697cd;
+
+  font-size: 2rem;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.08);
+
+  background: rgba(206, 181, 99, 0.15);
+}
+
+
+/* =================================
+   TEXT
+================================= */
+
+.card h3 {
+  margin: 0 0 15px;
+
+  font-size: 1.4rem;
+
+  color: var(--primary-dark);
+}
+
+.card p {
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  line-height: 1.75;
+
+  color: var(--text);
+}
+
+
+/* =================================
+   BOTTOM LINE
+================================= */
+
+.cardLine {
+  width: 40px;
+  height: 2px;
+
+  margin-top: 25px;
+
+  background: #ceb563;
+
+  transition: width 0.3s ease;
+}
+
+.card:hover .cardLine {
+  width: 70px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+  .mainCon {
+    padding: 70px 30px;
+  }
+
+  .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .cardList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .mainCon {
+    margin-top: 80px;
+
+    padding: 60px 20px;
+  }
+
+  .content {
+    margin-bottom: 45px;
+  }
+
+  .content h2 {
+    font-size: 2.2rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 1.7rem;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+}

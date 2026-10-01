@@ -1,0 +1,145 @@
+
+/* =========================
+   HEADER
+   ========================= */
+
+.headerContainer {
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+
+  z-index: 2000;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+  padding: 30px 5%;
+  
+   background: linear-gradient(
+    90deg,
+    var(--primary-dark),
+    var(--primary)
+  );
+  color: var(--white);
+
+  
+
+}
+.flexLogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.flexLogo img{
+  width: 100px;
+  height: auto;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.liItems {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 40px;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+.liItems > li {
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition:    transform 0.3s ease;
+  color: var(--white);
+  -webkit-transition:    transform 0.3s ease;
+  -moz-transition:    transform 0.3s ease;
+  -ms-transition:    transform 0.3s ease;
+  -o-transition:    transform 0.3s ease;
+}
+
+
+.liItems > li:hover {
+  color:var(--gold);
+cursor: pointer;
+  transform: translateY(-3px);
+}
+
+
+.destinationHover{
+  position: relative;
+
+}
+.dropDown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white);
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.dropDown li {
+  padding: 10px 20px;
+  color: var(--primary-dark);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dropDown li:hover {
+  background-color: var(--gold);
+  color: var(--white);
+  cursor: pointer;
+}
+/* =========================
+   MOBILE RESPONSIVE HEADER
+   ========================= */
+
+@media (max-width: 768px) {
+  .headerContainer {
+    padding: 20px 5%;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .liItems {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .liItems > li {
+    font-size: 0.9rem;
+  }
+
+  .dropDown {
+    min-width: 140px;
+    left: auto;
+    right: 0;
+  }
+
+  .dropDown li {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}

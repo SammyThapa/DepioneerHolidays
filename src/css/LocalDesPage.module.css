@@ -1,0 +1,316 @@
+/* Main Container */
+.mainContainer {
+  width: 100%;
+  max-width: 100%;
+  padding: 70px 4%;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+/* Heading */
+.heading {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.heading h2 {
+  margin: 12px 0;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--primary-dark);
+  overflow-wrap: break-word;
+}
+
+.heading h2 strong {
+  color: #ceb563;
+  font-weight: 600;
+}
+
+.heading p {
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  overflow-wrap: break-word;
+}
+
+/* Input */
+.inputField {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  border: 2px solid #5697cd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: #2f6fa3;
+  box-shadow: 0 0 0 3px rgba(86, 151, 205, 0.2);
+}
+
+.inputField::placeholder {
+  color: #999;
+}
+
+/* Cards Grid */
+.cardGrid {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.12);
+
+  cursor: pointer;
+}
+
+/* Card Image */
+.card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 15, 35, 0.9),
+    rgba(5, 15, 35, 0.1) 70%
+  );
+}
+
+/* Card Content */
+.cardContent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  color: white;
+}
+
+.cardContent h3 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+.cardContent p {
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cardContent button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  background: #3658d4;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cardContent button:hover {
+  background: #2948bd;
+  transform: translateY(-3px);
+}
+
+/* View More Button */
+.viewMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 14px 22px;
+  border: none;
+  border-radius: 20px;
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  margin: 20px 0 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.viewMore:hover {
+  transform: translateY(-5px);
+  background: #2a5171;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .mainContainer {
+    padding: 60px 5%;
+  }
+
+  .heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .cardContent {
+    padding: 20px;
+  }
+
+  .cardContent h3 {
+    font-size: 1.5rem;
+  }
+
+  .cardContent p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile - one card per row */
+@media (max-width: 600px) {
+  .mainContainer {
+    width: 100%;
+    padding: 45px 20px;
+    margin-top: 80px;
+    gap: 20px;
+  }
+
+  .heading {
+    margin-bottom: 20px;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .heading p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* One card below another */
+  .cardGrid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+
+  /* Simple, wide mobile card */
+  .card {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 5 / 4;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .cardContent {
+    padding: 18px;
+  }
+
+  .cardContent h3 {
+    font-size: 1.5rem;
+  }
+
+  .cardContent p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .cardContent button {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+
+  .viewMore {
+    width: 100%;
+    max-width: 220px;
+    margin-top: 15px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 380px) {
+  .mainContainer {
+    padding: 35px 15px;
+  }
+
+  .heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    aspect-ratio: 5 / 4;
+  }
+
+  .cardContent {
+    padding: 15px;
+  }
+
+  .cardContent h3 {
+    font-size: 1.3rem;
+  }
+
+  .cardContent p {
+    font-size: 0.85rem;
+  }
+
+  .cardContent button {
+    padding: 9px;
+    font-size: 0.85rem;
+  }
+}
