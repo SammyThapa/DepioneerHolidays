@@ -67,18 +67,17 @@ import edinburgh3 from "../assets/gallerydes/uk/edinburgh/edinburgh3.jpg";
 import lakedistrict1 from "../assets/gallerydes/uk/lakedistrict/lakedistrict1.jpg";
 import lakedistrict2 from "../assets/gallerydes/uk/lakedistrict/lakedistrict2.jpg";
 import lakedistrict3 from "../assets/gallerydes/uk/lakedistrict/lakedistrict3.jpg";
+import ubud1 from "../assets/gallerydes/bali/Ubud/ubud1.jpg";
+import ubud2 from "../assets/gallerydes/bali/Ubud/ubud2.jpg";
+import ubud3 from "../assets/gallerydes/bali/Ubud/ubud3.jpg";
 
-import ubud1 from "../assets/gallerydes/bali/ubud/ubud1.jpg";
-import ubud2 from "../assets/gallerydes/bali/ubud/ubud2.jpg";
-import ubud3 from "../assets/gallerydes/bali/ubud/ubud3.jpg";
+import seminyak1 from "../assets/gallerydes/bali/Seminyak/seminyak1.jpg";
+import seminyak2 from "../assets/gallerydes/bali/Seminyak/seminyak2.jpg";
+import seminyak3 from "../assets/gallerydes/bali/Seminyak/seminyak3.jpg";
 
-import seminyak1 from "../assets/gallerydes/bali/seminyak/seminyak1.jpg";
-import seminyak2 from "../assets/gallerydes/bali/seminyak/seminyak2.jpg";
-import seminyak3 from "../assets/gallerydes/bali/seminyak/seminyak3.jpg";
-
-import uluwatu1 from "../assets/gallerydes/bali/uluwatu/uluwatu1.jpg";
-import uluwatu2 from "../assets/gallerydes/bali/uluwatu/uluwatu2.jpg";
-import uluwatu3 from "../assets/gallerydes/bali/uluwatu/uluwatu3.jpg";
+import uluwatu1 from "../assets/gallerydes/bali/Uluwatu/uluwatu1.jpg";
+import uluwatu2 from "../assets/gallerydes/bali/Uluwatu/uluwatu2.jpg";
+import uluwatu3 from "../assets/gallerydes/bali/Uluwatu/uluwatu3.jpg";
 
 import burjkhalifa1 from "../assets/gallerydes/dubai/burjkhalifa/burjkhalifa1.jpg";
 import burjkhalifa2 from "../assets/gallerydes/dubai/burjkhalifa/burjkhalifa2.jpg";
