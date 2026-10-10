@@ -32,7 +32,7 @@ function Body() {
               delay: 0.3,
               ease: "easeOut",
             }}
-          >
+          > 
             <Link to="/enquiry">
               <button className={style.bookNowBtn}>Enquire Us</button>
             </Link>
