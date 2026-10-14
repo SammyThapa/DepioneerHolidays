@@ -60,12 +60,12 @@ function IndiaTourDes() {
             tour packages designed to make every journey comfortable, memorable,
             and hassle-free. From breathtaking mountains and beautiful beaches
             to historic cities and rich cultural experiences, explore India with
-            a travel plan tailored to your journey.
+            a travel plan tailored to your journey. 
           </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          viewport={{ once: true }}
+          viewport={{ once: true }} 
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.8,

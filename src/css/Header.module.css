@@ -111,35 +111,181 @@ cursor: pointer;
   color: var(--white);
   cursor: pointer;
 }
+
+
+.menuButton {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  margin-left: auto;
+  padding: 5px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+}
+
+.menuButton span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: var(--color-white);
+
+  border-radius: 2px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+
+
+.menuOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menuOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* =========================
    MOBILE RESPONSIVE HEADER
    ========================= */
 
 @media (max-width: 768px) {
   .headerContainer {
-    padding: 20px 5%;
+    padding: 15px 5%;
     justify-content: space-between;
-    gap: 15px;
+    gap: 12px;
   }
 
+  /* Logo and company name */
+  .flexLogo {
+    gap: 10px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .flexLogo img {
+    width: 55px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .flexLogo h1 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  /* Show hamburger on mobile */
+  .menuButton {
+    display: flex;
+    position: relative;
+    z-index: 2002;
+  }
+
+  /* Hide navigation by default */
   .liItems {
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 10px 0;
+    margin: 0;
+    background: var(--primary-dark);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show navigation when hamburger is clicked */
+  .liItems.listOpen {
+    display: flex;
   }
 
   .liItems > li {
-    font-size: 0.9rem;
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1rem;
+    transform: none;
+  }
+
+  .liItems > li:hover {
+    transform: none;
+    color: var(--gold);
+  }
+
+  /* Destination dropdown */
+  .destinationHover {
+    position: relative;
   }
 
   .dropDown {
-    min-width: 140px;
-    left: auto;
-    right: 0;
+    position: static;
+    width: 100%;
+    min-width: 0;
+    margin-top: 12px;
+    padding: 5px 0;
+    background: var(--white);
+    box-shadow: none;
+    border-radius: 6px;
   }
 
   .dropDown li {
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 0.9rem;
+    white-space: normal;
+  }
+
+  .dropDown li a {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 400px) {
+  .headerContainer {
+    padding: 12px 4%;
+    gap: 6px;
+  }
+
+  .flexLogo {
+    gap: 7px;
+  }
+
+  .flexLogo img {
+    width: 42px;
+  }
+
+  .flexLogo h1 {
+    font-size: 0.72rem;
+  }
+
+  .menuButton {
+    width: 38px;
+    height: 38px;
   }
 }

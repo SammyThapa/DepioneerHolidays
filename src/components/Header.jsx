@@ -5,18 +5,38 @@ import logo from "../assets/logo.png";
 
 function Header() {
   const [showDropDown, setShowDropDown] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    menuOpen(false);
+  };
 
   return (
     <div>
       <div className={style.headerContainer}>
         <div className={style.flexLogo}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="" onClick={closeMenu} />
           <h1>DEPIONEER HOLIDAYS INDIA PVT LTD.</h1>
         </div>
 
-        <ul className={style.liItems}>
+        {/* Hamburger */}
+        <button
+          className={`${style.menuButton} ${menuOpen ? style.menuOpen : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`${style.liItems} ${menuOpen ? style.listOpen : ""}`}>
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link to={"/"} onClick={closeMenu}>
+              Home
+            </Link>
           </li>
 
           <li
@@ -28,26 +48,36 @@ function Header() {
             {showDropDown && (
               <ul className={style.dropDown}>
                 <li>
-                  <Link to="/LocalDestinationpg">Domestic</Link>
+                  <Link to="/LocalDestinationpg" onClick={closeMenu}>
+                    Domestic
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/InterDestinationpg">International</Link>
+                  <Link to="/InterDestinationpg" onClick={closeMenu}>
+                    International
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/PopularDestinationpg">Famous Destinations</Link>
+                  <Link to="/PopularDestinationpg" onClick={closeMenu}>
+                    Famous Destinations
+                  </Link>
                 </li>
               </ul>
             )}
           </li>
 
           <li>
-            <Link to="/AboutUs">About Us</Link>
+            <Link to="/AboutUs" onClick={closeMenu}>
+              About Us
+            </Link>
           </li>
 
           <li>
-            <Link to="/gallery">Gallery</Link>
+            <Link to="/gallery" onClick={closeMenu}>
+              Gallery
+            </Link>
           </li>
         </ul>
       </div>
