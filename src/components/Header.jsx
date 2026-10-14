@@ -9,7 +9,7 @@ function Header() {
 
   const closeMenu = () => {
     setMenuOpen(false);
-    menuOpen(false);
+    setShowDropDown(false);
   };
 
   return (
